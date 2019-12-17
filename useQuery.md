@@ -14,7 +14,9 @@ This article assumes that you have a solid understanding of writing GraphQL quer
 
 ## Fetching Data ##
 
-For this exercise, we're going to pretend that we have a space shuttle service. We want to create a query that returns the name and id of each space shuttle. To begin, open a new file. Import the `gql` function to parse the query and the `useQuery` hook from the `@apollo/react-hooks` package. Your code will look something like this:
+For our exercise, we're going to pretend that we have a space shuttle service. We want to create a query that returns the name and id of each space shuttle. 
+
+To begin, open a new file. Import the `gql` function to parse the query and the `useQuery` hook from the `@apollo/react-hooks` package. Your code will look something like this:
 
 ```javascript
 import gql from 'graphql-tag';
@@ -51,7 +53,7 @@ function Shuttles() {
 }
 ```
 
-Now, we have a simple component that returns shuttles via `useQuery`. You'll notice that in addition to `data`, `useQuery` returns an object with `loading` and `error` states needed to conditionally handle UI scenarios.
+Now, we have a simple component that returns shuttles via `useQuery`. You'll notice that in addition to `data`, `useQuery` returns an object with `loading` and `error` states needed to conditionally handle UI scenarios. This is great, because now we don't have to handle that state elsewhere - `useQuery` is doing it for us!
 
 ## Fetching Data with Variables ##
 
